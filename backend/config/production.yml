@@ -2,6 +2,12 @@ server:
   origin: https://aputransparencia.com
 
 db:
+  host: 'localhost'
+  username: 'root'
+  password: 'Yolo19960@'
+  type: 'mysql'
+  port: 3306
+  database: 'uleam_apu_db'
   synchronize: false
 
 jwt:
