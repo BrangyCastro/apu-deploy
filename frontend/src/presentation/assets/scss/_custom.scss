@@ -1,0 +1,221 @@
+// Here you can add other styles
+
+$body-bg: #000;
+$body-color: #111;
+
+.c-sidebar-primary {
+  background-color: #55b844 !important;
+}
+
+.c-sidebar-nav-link {
+  color: white !important;
+  &:hover {
+    background-color: #63a557 !important;
+  }
+}
+
+.footer-home {
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #15212b !important;
+  color: white !important;
+  margin-top: 50px;
+  .container-footer-all {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+    .container-body {
+      display: flex;
+      justify-content: space-around;
+      .colum2 {
+        h1 {
+          font-size: 28px;
+        }
+        .row-r {
+          margin-top: 20px;
+          display: flex;
+          a {
+            text-decoration: none;
+            color: #d9d9d9;
+            &:hover {
+              color: #55b844;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .colum3 {
+        h1 {
+          font-size: 28px;
+        }
+        .row2 {
+          margin-top: 20px;
+          margin-right: 20px;
+          display: inline-block;
+
+          .c-sidebar-nav-icon {
+            width: 24px !important;
+            height: 24px !important;
+          }
+          label {
+            margin-top: 10px;
+            margin-left: 20px;
+            max-width: 140px;
+            a {
+              text-decoration: none;
+              color: #d9d9d9;
+              &:hover {
+                color: #55b844;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contenedor-footer {
+    width: 100%;
+    .footer {
+      background-color: #15212b !important;
+      // max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      .copyright {
+        color: #c7c7c7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        span {
+          text-align: center;
+          margin: 1px;
+        }
+      }
+    }
+  }
+}
+
+.form-pass {
+  .form-group-login {
+    .password-icon {
+      float: right;
+      position: relative;
+      width: 20px;
+      margin: -28px 10px 0 0;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container-footer-all {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+
+    .container-body {
+      flex-direction: column;
+      .colum2,
+      .colum3 {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .container-footer {
+    flex-direction: column;
+    height: 150px;
+    .footer {
+      .copyright {
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #05050580;
+  z-index: 2800 !important;
+  height: 100%;
+  width: 100%;
+}
+
+.no-js #preloader,
+.oldie #preloader {
+  display: none;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+  padding: 0;
+}
+
+#loader:before {
+  content: "";
+  border-top: 11px solid rgba(255, 255, 255, 0.1);
+  border-right: 11px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 11px solid rgba(255, 255, 255, 0.1);
+  border-left: 11px solid #ffffff;
+  -webkit-animation: load 1.1s infinite linear;
+  animation: load 1.1s infinite linear;
+  display: block;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+@-webkit-keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.status-success {
+  width: 10px;
+  height: 10px;
+  background: $primary;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(99, 165, 87, 0.61);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(99, 165, 87, 0.61);
+  box-shadow: 0px 0px 5px 1px rgba(99, 165, 87, 0.61);
+}
+
+.status-danger {
+  width: 10px;
+  height: 10px;
+  background: $danger;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(237, 29, 36, 0.61);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(237, 29, 36, 0.61);
+  box-shadow: 0px 0px 5px 1px rgba(237, 29, 36, 0.61);
+}

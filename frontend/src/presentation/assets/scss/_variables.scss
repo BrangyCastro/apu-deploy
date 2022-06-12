@@ -1,0 +1,58 @@
+// Variable overrides
+$primary: #63a557;
+$primary-color: $primary;
+$primary-light: #55b844;
+$primary-grey: #8799a6;
+$primary-dark-light: #192734;
+$primary-dark: #15212b;
+$secondary-color: #1ea6ec;
+
+$font-primary: $primary;
+$font-primary-opacity80: #63a557cc;
+$font-light: #fff;
+$font-grey: $primary-grey;
+$font-dark: #333;
+
+$border-primary: $primary;
+$border-light: #fff;
+$border-grey: #a5a5a5;
+$border-dark-bottom: #d9d9d9;
+$border-dark: $primary-dark;
+
+$background-light: #fff;
+$background-grey-dark: $primary-dark;
+$background-dark-light: $primary-dark-light;
+$background-menu: #00a749;
+$background-light-opacity25: #e4e4e440;
+$background-light-primary: #63a5570d;
+$background-light-primary-opacity25: #63a55740;
+
+$danger: #ed1d24;
+$success-color: #22af47;
+$info-color: #007bff;
+$warning-color: #ff9f40;
+$danger-color: #ff5370;
+$danger-light: #ed1d240d;
+$white: #ffffff;
+$light-text: #999;
+
+$theme-font-color: #1b252a;
+$theme-body-font-color: #313131;
+$theme-body-sub-title-color: #777777;
+$light-semi-gray: #eff0f1;
+$dark-all-font-color: rgba(255, 255, 255, 0.85);
+$dark-small-font-color: #98a6ad;
+$dark-card-background: #2f3c4e;
+$dark-border-color: #374558;
+$sidebar-submenu-font-color: rgba(255, 255, 255, 0.7);
+
+$dark-body-background: #293240;
+$dark-color: #2a3142;
+$transparent-color: transparent;
+$dark-gray: #898989;
+$light-color: #f6f7fb;
+$horizontal-border-color: #dee2e6;
+$semi-dark: #aaaaaa;
+$black: #000;
+
+$font-themify: themify;

@@ -1,0 +1,13 @@
+server:
+  origin: https://aputransparencia.com
+
+db:
+  synchronize: false
+
+jwt:
+  secret: 'topSecret51'
+  expiresIn: 36000
+
+mail:
+  mailAccount: 'no-reply@aputransparencia.com'
+  mailAccountPassword: 'UsXnqR8wIU7C'

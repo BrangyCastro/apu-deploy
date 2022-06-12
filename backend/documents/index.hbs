@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Reporte de {{venta.mes}}</title>
+
+  <head>
+    <style type="text/css">
+      body {
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: rgb(33, 33, 33);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 200;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .info {
+        width: 100%;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .info p {
+        display: inline-block;
+      }
+
+      #AlertDiv .titulo {
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        position: relative;
+      }
+
+      .info-docente {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 14px;
+      }
+
+      table {
+        background-color: white;
+        text-align: left;
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 12px;
+        border-radius: 5px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+      }
+
+      thead {
+        background-color: #246355;
+        border-bottom: solid 5px #0f362d;
+        color: white;
+        border-radius: 5px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #ddd;
+      }
+
+      .info-total {
+        margin-left: 600px;
+        font-size: 12px;
+        margin-top: 10px;
+      }
+
+      .report-header {
+        box-sizing: border-box;
+        display: flex;
+      }
+
+      .report-header .logo {
+        display: block;
+        margin: auto;
+        width: 250px;
+      }
+    </style>
+    <meta charset="utf-8">
+  </head>
+
+<body>
+  <div class="report-header">
+    <img src="https://aputransparencia.com/recursos/img/apu-3.png" class="logo">
+  </div>
+  <div id="AlertDiv">
+    <h1 class="titulo">Reporte del mes de {{venta.mesDescontar}}</h1>
+  </div>
+  <div class="info-docente">
+    <p><strong>Cédula:</strong> {{user.cedula}}</p>
+    <p><strong>Nombres:</strong> {{user.nombres}}</p>
+    <p><strong>Correo:</strong> {{user.email}}</p>
+    <p>
+      {{user.facultad.nombreFacultad}} -
+      {{user.facultad.localidad.extension}}
+    </p>
+  </div>
+  <div class="info-docente" style="margin-top: 10px;">
+    <p><strong>Observación:</strong> {{venta.observacion}}</p>
+  </div>
+  <div>
+    <table style="border: 1px solid black; border-radius: 5px; margin-top: 10px;">
+      <thead>
+        <tr>
+          <th>F. Emisión</th>
+          <th>Concepto</th>
+          <th>Meses</th>
+          <th>Pendiente</th>
+          <th>Cuota</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each ventaMes}}
+        <tr>
+          <td style="width:70px">{{fechaEmision}}</td>
+          <td>
+            {{#if proveedor}} {{proveedor.nombre}} {{else}}
+            {{apuExtension.nombre}} {{/if}} - {{producto}}
+          </td>
+          <td style="width:50px">
+            {{ifMeses totalMeses cuotaMeses}}
+          </td>
+          <td style="text-align: right; width:60px;">{{valorPendiente}}</td>
+          <td style="text-align: right; width:60px;">{{valorCuota}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info-total">
+    <table>
+      <tbody>
+        <tr>
+          <td style="text-align: left; font-weight: bold;">Sub Total:</td>
+          <td style="text-align: right;">{{tthh.totalProveedor}}</td>
+        </tr>
+        <tr>
+          <td style="text-align: left; font-weight: bold;">Aporte APU:</td>
+          <td style="text-align: right;">{{tthh.aporte}}</td>
+        </tr>
+        <tr>
+          <td style="text-align: left; font-weight: bold;">Total:</td>
+          <td style="text-align: right;">{{total}}</td>
+        </tr>
+        <tr>
+          <td style="text-align: left; font-weight: bold;">
+            Dto. T. Humano:
+          </td>
+          <td style="text-align: right;">{{venta.total}}</td>
+        </tr>
+        {{ifDiferencia diferencia}}
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

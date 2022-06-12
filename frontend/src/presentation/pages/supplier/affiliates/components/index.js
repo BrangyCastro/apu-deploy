@@ -1,0 +1,1 @@
+export { TableAffiliates } from "./TableAffiliates";

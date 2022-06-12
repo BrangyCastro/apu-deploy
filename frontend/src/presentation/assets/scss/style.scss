@@ -1,0 +1,20 @@
+// If you want to override variables do it here
+@import "variables.scss";
+
+// Import CoreUI styles
+@import "~@coreui/coreui/scss/coreui.scss";
+
+// Some temp fixes
+@import "fixes.scss";
+
+// If you want to add something do it here
+@import "custom.scss";
+
+@import "ecommerce";
+@import "blog";
+@import "custom-theme-options";
+@import "ribbon";
+@import "invoice";
+@import "responsive";
+
+@import "~easymde/dist/easymde.min.css";

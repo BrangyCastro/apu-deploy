@@ -1,0 +1,60 @@
+.login-bg {
+  width: 100%;
+  min-height: 111vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-image: url("../../assets//img/uleam-1puerta.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .img-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-group-login {
+    .password-icon {
+      float: right;
+      position: relative;
+      width: 20px;
+      margin: -28px 10px 0 0;
+      cursor: pointer;
+    }
+  }
+  .copyright-container {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    padding-top: 20px;
+    span {
+      color: black;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .login-bg {
+    h1 {
+      font-size: 24px;
+    }
+    .card-logo {
+      display: none;
+    }
+    .copyright-container {
+      text-align: center;
+    }
+  }
+}

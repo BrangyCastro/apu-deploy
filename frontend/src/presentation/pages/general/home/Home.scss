@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+.wrap-dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // margin-top: 50px;
+  .img {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 900px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .wrap-dashboard {
+    .img {
+      img {
+        width: 400px;
+      }
+    }
+  }
+}

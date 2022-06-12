@@ -1,0 +1,1 @@
+export { TableGenerate } from "./TableGenerate";
