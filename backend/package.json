@@ -54,14 +54,13 @@
     "typeorm": "^0.2.25"
   },
   "devDependencies": {
-    "@types/node": "^14.18.10",
-    "typescript": "^3.9.10",
     "@nestjs/cli": "^7.0.0",
     "@nestjs/schematics": "^7.0.0",
     "@nestjs/testing": "^7.0.0",
     "@types/cron": "^1.7.2",
     "@types/jest": "25.1.4",
-    "@types/superagent": "^7.1.6",
+    "@types/node": "^14.18.10",
+    "@types/superagent": "4.1.10",
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^2.23.0",
     "@typescript-eslint/parser": "^2.23.0",
@@ -73,7 +72,8 @@
     "supertest": "^4.0.2",
     "ts-jest": "^26.5.6",
     "ts-loader": "^6.2.1",
-    "tsconfig-paths": "^3.9.0"
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.9.10"
   },
   "jest": {
     "moduleFileExtensions": [

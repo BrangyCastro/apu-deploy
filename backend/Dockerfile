@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:14.18.1
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ ENV TYPE=mysql
 ENV PORT=3306
 ENV DATABASE=uleam_apu_db
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 EXPOSE 8000
 
